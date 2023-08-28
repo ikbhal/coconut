@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coconut Selling Points</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Coconut Selling Points</h1>
+        <div class="form">
+            <h2>Add Selling Point</h2>
+            <form id="add-selling-point-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+                <label for="latitude">Latitude:</label>
+                <input type="text" id="latitude" required>
+                <label for="longitude">Longitude:</label>
+                <input type="text" id="longitude" required>
+                <label for="upi">UPI:</label>
+                <input type="text" id="upi" required>
+                <button type="submit">Add Selling Point</button>
+            </form>
+        </div>
+        <div class="view-buttons">
+            <button id="list-view-button">List View</button>
+            <button id="map-view-button">Map View</button>
+        </div>
+        <div class="map-view" style="display: none;">
+            <h2>Map View</h2>
+            <div id="map"></div>
+        </div>
+        <div class="list-view">
+            <h2>List View</h2>
+            <table id="selling-points-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Mobile</th>
+                        <th>Address</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>UPI</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="map-view">
+            <h2>Map View</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script>
+</body>
+</html>
