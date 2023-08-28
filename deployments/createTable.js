@@ -1,7 +1,9 @@
 const sqlite3 = require('sqlite3').verbose();
 
 // SQLite database setup
-const db = new sqlite3.Database('coconut_db.db');
+// create file at ../data 
+// create file  ../ data, coconut_db.db
+const db = new sqlite3.Database('../coconut_db.db');
 
 // Create the selling_points table if it doesn't exist
 db.run(`CREATE TABLE IF NOT EXISTS selling_points (
